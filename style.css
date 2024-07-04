@@ -188,7 +188,6 @@ body {
   height: 2ex;
   left: 0;
   top: 0;
-  background: #eff5ed;
   animation: move 3s steps(1) 1.5s forwards, blink .6s step-end 20;
   border-left: 1px solid #fff;
   box-shadow: 0px 1ex 0px 0px #eff5ed;
