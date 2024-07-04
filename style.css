@@ -131,193 +131,7 @@ html {
     margin-left: 1rem;
   }
   
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  section.notice {
-    position: fixed;
-    width: -webkit-fill-available;
-    height: auto;
-    margin: 0 auto;
-    left: 0;
-    padding: 80px 0;
-    top: 20%;
-    color: #fff;
-  }
-  
-  .page-title {
-    margin-bottom: 20px;
-  }
-  .page-title h3 {
-    font-size: 28px;
-    color: #fff;
-    font-weight: 600;
-    text-align: left;
-    margin-left: 1.5vh;
-  }
-  
-  #board-search .search-window {
-    padding: 15px 0;
-    background-color: #f9f7f9;
-  }
-  #board-search .search-window .search-wrap {
-    position: relative;
-    margin: 0 auto;
-    width: 80%;
-    max-width: 564px;
-  }
-  #board-search .search-window .search-wrap input {
-    height: 40px;
-    width: 100%;
-    font-size: 14px;
-    padding: 7px 14px;
-    border: 1px solid #ccc;
-  }
-  #board-search .search-window .search-wrap input:focus {
-    border-color: #333;
-    outline: 0;
-    border-width: 1px;
-  }
-  #board-search .search-window .search-wrap .btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 108px;
-    padding: 0;
-    font-size: 16px;
-  }
-  
-  .board-table {
-    font-size: 13px;
-    width: 100%;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .board-table a {
-    color: #fff;
-    display: inline-block;
-    line-height: 1.4;
-    word-break: break-all;
-    vertical-align: middle;
-  }
-  .board-table a:hover {
-    text-decoration: underline;
-  }
-  .board-table th {
-    text-align: center;
-  }
-  
-  .board-table .th-num {
-    width: 100px;
-    text-align: center;
-  }
-  
-  .board-table .th-date {
-    width: 200px;
-  }
-  
-  .board-table th, .board-table td {
-    padding: 14px 0;
-  }
-  
-  .board-table tbody td {
-    border-top: 1px solid #e7e7e7;
-    text-align: center;
-  }
-  
-  .board-table tbody th {
-    padding-left: 28px;
-    padding-right: 14px;
-    border-top: 1px solid #e7e7e7;
-    text-align: left;
-  }
-  
-  .board-table tbody th p {
-    display: none;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 0 30px;
-    font-size: 15px;
-    font-weight: 400;
-    background: transparent;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    text-transform: uppercase;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  
-  .btn-dark {
-    background: #555;
-    color: #fff;
-  }
-  
-  .btn-dark:hover, .btn-dark:focus {
-    background: #373737;
-    border-color: #373737;
-    color: #fff;
-  }
-  
-  .btn-dark {
-    background: #555;
-    color: #fff;
-  }
-  
-  .btn-dark:hover, .btn-dark:focus {
-    background: #373737;
-    border-color: #373737;
-    color: #fff;
-  }
-  
-  /* reset */
-  
-  * {
-    list-style: none;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  .clearfix:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-  .container {
-    position: relative;
-    width: -webkit-fill-available;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-  }
-  .blind {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-  }
+ 
   
   .custom-gui-container {
     position: absolute;
@@ -342,3 +156,95 @@ html {
   .dg.ac {
     display: none !important;
   }
+
+
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+//Completely customizable
+//--
+$font-size: 40px;
+$letter-spacing: 0.0625em; //This counts for 1px on 16px font;
+$letter-count: 20; //Number of letters in text !important
+$transition-time: 3s; //Typing speed
+$bg-color: #eff5ed;
+$mask-color: #eff5ed; //Change it to see how this works :)
+$font-color: #152860;
+
+$letter-size: calc(1ch + #{$letter-spacing});
+$cursor-width: 1px; //Change this to $letter-size if you want Insert:active effect
+//--
+$cursor-blink-duration: $letter-count;
+$font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
+
+*, *:after, *:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #eff5ed;
+	font-family: courier, serif; //Need monospace font for this to work
+	text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+.hello {
+	@include center;
+	top: 25%;
+
+	h3 {
+		position: relative;
+	    color: $font-color;
+	    text-align: center;
+	    white-space: nowrap;
+		font-size: $font-size;
+		letter-spacing: $letter-spacing;
+		width: $font-width;
+
+	    &:after {
+			display: block;
+			position: absolute;
+			content: '';
+			width: $font-width;
+			height: 2ex;
+			left: 0;
+			top: 0;
+			background: $mask-color;
+			animation: .6s blink $cursor-blink-duration, move $transition-time 1.5s forwards steps(1);
+			border-left: $cursor-width solid $font-color;
+			box-shadow: 0px 1ex 0px 0px $mask-color;
+
+			@keyframes move {
+				@for $i from 1 through $letter-count {
+					$temp: 100/$letter-count;
+					$percent: $i*$temp;
+					#{$percent}% {
+						width: calc(#{$font-width} - (#{$i}ch + #{$i}*#{$letter-spacing}));
+						left: calc(#{$i}ch + #{$i}*#{$letter-spacing});
+					}
+				}
+			}
+
+			@keyframes blink {
+				0% {
+			  		border-left-color: $font-color;
+				}
+				50% {
+			  		border-left-color: $font-color;
+				}
+				51% {
+			  		border-left-color: $mask-color;
+				}
+				100% {
+			  		border-left-color: $mask-color;
+				}
+			}
+	  	}
+	}
+}
