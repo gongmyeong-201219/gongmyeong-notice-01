@@ -168,19 +168,19 @@ canvas {
 
 // Completely customizable
 // --
-$font-size: 40px;
-$letter-spacing: 0.0625em; // This counts for 1px on 16px font
-$letter-count: 20; // Number of letters in text !important
-$transition-time: 3s; // Typing speed
-$bg-color: #eff5ed;
-$mask-color: #eff5ed; // Change it to see how this works :)
-$font-color: #152860;
+font-size: 40px;
+letter-spacing: 0.0625em; // This counts for 1px on 16px font
+letter-count: 20; // Number of letters in text !important
+transition-time: 3s; // Typing speed
+bg-color: #eff5ed;
+mask-color: #eff5ed; // Change it to see how this works :)
+font-color: #152860;
 
-$letter-size: calc(1ch + #{$letter-spacing});
-$cursor-width: 1px; // Change this to $letter-size if you want Insert:active effect
+letter-size: calc(1ch + #{$letter-spacing});
+cursor-width: 1px; // Change this to letter-size if you want Insert:active effect
 // --
-$cursor-blink-duration: $letter-count;
-$font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
+cursor-blink-duration: $letter-count;
+font-width: calc(#{letter-count}ch + #{letter-count}*#{letter-spacing});
 
 *, *:after, *:before {
 	box-sizing: border-box;
@@ -197,43 +197,43 @@ $font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
 
 	h3 {
 	    position: relative;
-	    color: $font-color;
+	    color: #fff;
 	    text-align: center;
 	    white-space: nowrap;
-		font-size: $font-size;
-		letter-spacing: $letter-spacing;
-		width: $font-width;
+		font-size: 20px;
+		letter-spacing: letter-spacing;
+		width: font-width;
 
-	    &:after {
+	    :after {
 			display: block;
 			position: absolute;
 			content: '';
-			width: $font-width;
+			width: font-width;
 			height: 2ex;
 			left: 0;
 			top: 0;
-			background: $mask-color;
-			animation: move $transition-time steps(1) 1.5s forwards, blink .6s step-end $cursor-blink-duration;
-			border-left: $cursor-width solid $font-color;
+			background: mask-color;
+			animation: move transition-time steps(1) 1.5s forwards, blink .6s step-end cursor-blink-duration;
+			border-left: cursor-width solid font-color;
 			box-shadow: 0px 1ex 0px 0px $mask-color;
 
 			@keyframes move {
-				@for $i from 1 through $letter-count {
-					$temp: 100/$letter-count;
-					$percent: $i*$temp;
+				@for i from 1 through $letter-count {
+					temp: 100/$letter-count;
+					percent: $i*$temp;
 					#{$percent}% {
-						width: calc(#{$font-width} - (#{$i}ch + #{$i}*#{$letter-spacing}));
-						left: calc(#{$i}ch + #{$i}*#{$letter-spacing});
+						width: calc(#{font-width} - (#{i}ch + #{i}*#{letter-spacing}));
+						left: calc(#{i}ch + #{$i}*#{letter-spacing});
 					}
 				}
 			}
 
 			@keyframes blink {
 				0%, 50% {
-			  		border-left-color: $font-color;
+			  		border-left-color: font-color;
 				}
 				51%, 100% {
-			  		border-left-color: $mask-color;
+			  		border-left-color: mask-color;
 				}
 			}
 	  	}
