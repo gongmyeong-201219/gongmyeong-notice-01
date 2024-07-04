@@ -197,9 +197,11 @@ body {
 .hello {
 	@include center;
 	top: 25%;
+	position: absolute;
+	color: #fff;
 
 	h3 {
-		position: relative;
+	    position: relative;
 	    color: $font-color;
 	    text-align: center;
 	    white-space: nowrap;
