@@ -1,163 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
+
 html {
-    font-size: 16px;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  body {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #111;
-    font-family: "helvetica neue", helvetica, sans-serif;
-    overflow: hidden;
-  }
-  
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .scroll {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.5);
-    font-family: "font-2";
-    font-size: calc(0.5rem + 0.35vw);
-    z-index: 10;
-  }
-  
-  .logo {
-    position: absolute;
-    top: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0;
-    margin: 0;
-    z-index: 10;
-  }
-  .logo img {
-    display: block;
-    height: 3rem;
-    width: auto;
-  }
-  
-  ul, li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav {
-    position: absolute;
-    top: 2rem;
-    z-index: 10;
-  }
-  .nav--left {
-    left: 1rem;
-  }
-  .nav--right {
-    right: 1rem;
-  }
-  .nav ul {
-    display: flex;
-    align-items: center;
-    height: 1rem;
-  }
-  .nav li {
-    display: block;
-    margin: 0 1rem;
-    padding: 0;
-  }
-  .nav a {
-    position: relative;
-    display: flex;
-    align-items: center;
-    font-size: calc(0.5rem + 0.35vw);
-    font-family: "helvetica neue", helvetica, sans-serif;
-  }
-  .nav a span {
-    position: relative;
-  }
-  .nav a span:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.35rem;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.25);
-    transition: transform 0.75s ease;
-    transform-origin: right;
-    transform: scaleX(0);
-  }
-  .nav a:hover span:before, .nav a.is-active span:before {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-  
-  .vert-text {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    width: 15rem;
-    display: flex;
-    align-items: center;
-    z-index: 10;
-  }
-  .vert-text span {
-    display: block;
-    color: #fff;
-    text-transform: uppercase;
-    line-height: 1.1;
-    transform: rotate(-90deg) translateY(15rem);
-    transform-origin: bottom left;
-    font-size: 1.35rem;
-  }
-  
-  .cart-total {
-    display: block;
-    height: 2rem;
-    width: 2rem;
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 2rem;
-    margin-left: 1rem;
-  }
-  
- 
-  
-  .custom-gui-container {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: -999;
-  }
-  .custom-gui-container.hidden {
-    display: none;
-  }
+  font-size: 16px;
+}
 
-  myCanvas{
-      width: 100vh;
-      height: 100vh;
-  }
+html, body {
+  height: 100%;
+}
 
-  canvas {
-    display: block;
-    background-color: #000;
-  }
-  
-  .dg.ac {
-    display: none !important;
-  }
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  font-family: "helvetica neue", helvetica, sans-serif;
+  overflow: hidden;
+}
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
 
+.scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "font-2";
+  font-size: calc(0.5rem + 0.35vw);
+  z-index: 10;
+}
+
+.logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+.logo img {
+  display: block;
+  height: 3rem;
+  width: auto;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  position: absolute;
+  top: 2rem;
+  z-index: 10;
+}
+.nav--left {
+  left: 1rem;
+}
+.nav--right {
+  right: 1rem;
+}
+.nav ul {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+}
+.nav li {
+  display: block;
+  margin: 0 1rem;
+  padding: 0;
+}
+.nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: calc(0.5rem + 0.35vw);
+  font-family: "helvetica neue", helvetica, sans-serif;
+}
+.nav a span {
+  position: relative;
+}
+.nav a span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: transform 0.75s ease;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+.nav a:hover span:before, .nav a.is-active span:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.vert-text {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+.vert-text span {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.1;
+  transform: rotate(-90deg) translateY(15rem);
+  transform-origin: bottom left;
+  font-size: 1.35rem;
+}
+
+.cart-total {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2rem;
+  margin-left: 1rem;
+}
+
+.custom-gui-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: -999;
+}
+.custom-gui-container.hidden {
+  display: none;
+}
+
+#myCanvas {
+    width: 100vh;
+    height: 100vh;
+}
+
+canvas {
+  display: block;
+  background-color: #000;
+}
+
+.dg.ac {
+  display: none !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
 
 @mixin center {
 	position: absolute;
@@ -165,19 +165,20 @@ html {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-//Completely customizable
-//--
+
+// Completely customizable
+// --
 $font-size: 40px;
-$letter-spacing: 0.0625em; //This counts for 1px on 16px font;
-$letter-count: 20; //Number of letters in text !important
-$transition-time: 3s; //Typing speed
+$letter-spacing: 0.0625em; // This counts for 1px on 16px font
+$letter-count: 20; // Number of letters in text !important
+$transition-time: 3s; // Typing speed
 $bg-color: #eff5ed;
-$mask-color: #eff5ed; //Change it to see how this works :)
+$mask-color: #eff5ed; // Change it to see how this works :)
 $font-color: #152860;
 
 $letter-size: calc(1ch + #{$letter-spacing});
-$cursor-width: 1px; //Change this to $letter-size if you want Insert:active effect
-//--
+$cursor-width: 1px; // Change this to $letter-size if you want Insert:active effect
+// --
 $cursor-blink-duration: $letter-count;
 $font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
 
@@ -187,18 +188,12 @@ $font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
 	padding: 0;
 }
 
-body {
-	background: #eff5ed;
-	font-family: courier, serif; //Need monospace font for this to work
-	text-align: center;
-    -webkit-font-smoothing: antialiased;
-}
-
 .hello {
 	@include center;
 	top: 25%;
 	position: absolute;
 	color: #fff;
+	-webkit-font-smoothing: antialiased;
 
 	h3 {
 	    position: relative;
@@ -218,7 +213,7 @@ body {
 			left: 0;
 			top: 0;
 			background: $mask-color;
-			animation: .6s blink $cursor-blink-duration, move $transition-time 1.5s forwards steps(1);
+			animation: move $transition-time steps(1) 1.5s forwards, blink .6s step-end $cursor-blink-duration;
 			border-left: $cursor-width solid $font-color;
 			box-shadow: 0px 1ex 0px 0px $mask-color;
 
@@ -234,16 +229,10 @@ body {
 			}
 
 			@keyframes blink {
-				0% {
+				0%, 50% {
 			  		border-left-color: $font-color;
 				}
-				50% {
-			  		border-left-color: $font-color;
-				}
-				51% {
-			  		border-left-color: $mask-color;
-				}
-				100% {
+				51%, 100% {
 			  		border-left-color: $mask-color;
 				}
 			}
