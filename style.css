@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
-
 html {
   font-size: 16px;
 }
@@ -157,85 +155,70 @@ canvas {
   display: none !important;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
-
-@mixin center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-// Completely customizable
-// --
-$font-size: 40px;
-$letter-spacing: 0.0625em; // This counts for 1px on 16px font
-$letter-count: 20; // Number of letters in text !important
-$transition-time: 3s; // Typing speed
-$bg-color: #eff5ed;
-$mask-color: #eff5ed; // Change it to see how this works :)
-$font-color: #152860;
-
-$letter-size: calc(1ch + #{$letter-spacing});
-$cursor-width: 1px; // Change this to $letter-size if you want Insert:active effect
-// --
-$cursor-blink-duration: $letter-count;
-$font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
-
-*, *:after, *:before {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+body {
+  background: #eff5ed;
+  font-family: courier, serif; /* Need monospace font for this to work */
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
 }
 
 .hello {
-	@include center;
-	top: 25%;
-	position: absolute;
-	color: #fff;
-	-webkit-font-smoothing: antialiased;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
 
-	h3 {
-	    position: relative;
-	    color: $font-color;
-	    text-align: center;
-	    white-space: nowrap;
-		font-size: $font-size;
-		letter-spacing: $letter-spacing;
-		width: $font-width;
+.hello h3 {
+  position: relative;
+  color: #152860;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 40px;
+  letter-spacing: 0.0625em;
+  width: calc(20ch + 20 * 0.0625em);
+}
 
-	    &:after {
-			display: block;
-			position: absolute;
-			content: '';
-			width: $font-width;
-			height: 2ex;
-			left: 0;
-			top: 0;
-			background: $mask-color;
-			animation: move $transition-time steps(1) 1.5s forwards, blink .6s step-end $cursor-blink-duration;
-			border-left: $cursor-width solid $font-color;
-			box-shadow: 0px 1ex 0px 0px $mask-color;
+.hello h3:after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: calc(20ch + 20 * 0.0625em);
+  height: 2ex;
+  left: 0;
+  top: 0;
+  background: #eff5ed;
+  animation: move 3s steps(1) 1.5s forwards, blink .6s step-end 20;
+  border-left: 1px solid #152860;
+  box-shadow: 0px 1ex 0px 0px #eff5ed;
+}
 
-			@keyframes move {
-				@for $i from 1 through $letter-count {
-					$temp: 100/$letter-count;
-					$percent: $i*$temp;
-					#{$percent}% {
-						width: calc(#{$font-width} - (#{$i}ch + #{$i}*#{$letter-spacing}));
-						left: calc(#{$i}ch + #{$i}*#{$letter-spacing});
-					}
-				}
-			}
+@keyframes move {
+  0% { width: 100%; left: 0; }
+  5% { width: 95%; left: 5%; }
+  10% { width: 90%; left: 10%; }
+  15% { width: 85%; left: 15%; }
+  20% { width: 80%; left: 20%; }
+  25% { width: 75%; left: 25%; }
+  30% { width: 70%; left: 30%; }
+  35% { width: 65%; left: 35%; }
+  40% { width: 60%; left: 40%; }
+  45% { width: 55%; left: 45%; }
+  50% { width: 50%; left: 50%; }
+  55% { width: 45%; left: 55%; }
+  60% { width: 40%; left: 60%; }
+  65% { width: 35%; left: 65%; }
+  70% { width: 30%; left: 70%; }
+  75% { width: 25%; left: 75%; }
+  80% { width: 20%; left: 80%; }
+  85% { width: 15%; left: 85%; }
+  90% { width: 10%; left: 90%; }
+  95% { width: 5%; left: 95%; }
+  100% { width: 0%; left: 100%; }
+}
 
-			@keyframes blink {
-				0%, 50% {
-			  		border-left-color: $font-color;
-				}
-				51%, 100% {
-			  		border-left-color: $mask-color;
-				}
-			}
-	  	}
-	}
+@keyframes blink {
+  0%, 50% { border-left-color: #152860; }
+  51%, 100% { border-left-color: #eff5ed; }
 }
