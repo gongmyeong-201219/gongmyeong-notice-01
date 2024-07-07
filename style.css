@@ -141,10 +141,10 @@ ul, li {
   display: none;
 }
 
-#myCanvas {
+/* #myCanvas {
     width: 100vh;
     height: 100vh;
-}
+} */
 
 canvas {
   display: block;
