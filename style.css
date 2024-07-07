@@ -102,23 +102,23 @@ ul, li {
 }
 
 .vert-text {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  width: 15rem;
-  display: flex;
-  align-items: center;
-  z-index: 10;
-}
-.vert-text span {
-  display: block;
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 1.1;
-  transform: rotate(-90deg) translateY(15rem);
-  transform-origin: bottom left;
-  font-size: 1.35rem;
-}
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+  .vert-text span {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    transform: rotate(-90deg) translateY(15rem);
+    transform-origin: bottom left;
+    font-size: 1.35rem;
+  }
 
 .cart-total {
   display: block;
