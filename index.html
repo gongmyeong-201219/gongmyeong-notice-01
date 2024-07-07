@@ -56,6 +56,23 @@
 <div class="hello">
     <h3>안녕하세요. 너무 피곤합니다.</h3>
 </div>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const text = "안녕하세요. 너무 피곤합니다.<br>공명 공지사항 테스트를 하기 위해 만들어진 스크립트입니다.<br>부디 잘 입력되길.";
+      const target = document.querySelector(".hello");
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          target.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, 100); // 타이핑 속도 조절 (100ms)
+        }
+      }
+
+      type();
+    });
+  </script>
 
 <div class="vert-text">
   <span>
