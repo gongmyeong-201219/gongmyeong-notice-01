@@ -176,7 +176,7 @@ body {
   color: #152860;
   text-align: center;
   white-space: nowrap;
-  font-size: 40px;
+  font-size: 55px;
   letter-spacing: 0.0625em;
   overflow: hidden; /* Ensures the text is hidden until revealed by animation */
   width: 0; /* Initial width set to 0 */
