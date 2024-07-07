@@ -164,11 +164,13 @@ body {
 
 .hello {
   position: absolute;
-  top: 25%;
+  top: 40%;
   left: 50%;
   width: 80%;
   transform: translate(-50%, -50%);
   color: #fff;
+  line-height: 3;
+  font-family: "Noto Serif KR", serif;
 }
 
 .hello h3 {
